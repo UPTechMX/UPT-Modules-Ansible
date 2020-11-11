@@ -1,0 +1,11 @@
+# put this file at /etc/systemd/system/upt-up.service on ubuntu servers
+# give the file execution permissions
+# enable it with sudo systemctl enable upt-up.service
+[Unit]
+Description=upt-up script
+
+[Service]
+ExecStart=/home/{{ user }}/upt_scripts/upt-up.sh
+
+[Install]
+WantedBy=multi-user.target

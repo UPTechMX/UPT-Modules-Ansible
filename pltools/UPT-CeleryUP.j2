@@ -1,0 +1,8 @@
+#!/bin/bash
+
+function django-celery(){
+        echo "Starting UPT Celery UP"
+        cd /home/{{ user }}/upt-up/
+        source /home/{{ user }}/python3/bin/activate && celery -A UP worker --loglevel=error
+}
+django-celery

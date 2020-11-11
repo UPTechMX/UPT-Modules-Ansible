@@ -1,0 +1,8 @@
+#!/bin/bash
+
+function django(){
+        echo "Starting UPT UP"
+        cd /home/{{ user }}/upt-up/
+        source /home/{{ user }}/python3/bin/activate && python manage.py runserver 0.0.0.0:91
+}
+django

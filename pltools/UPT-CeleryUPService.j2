@@ -1,0 +1,11 @@
+# put this file at /etc/systemd/system/upt-celery-up.service on ubuntu servers
+# give the file execution permissions
+# enable it with sudo systemctl enable upt-celery-up.service
+[Unit]
+Description=upt-celery-up script
+
+[Service]
+ExecStart=/home/{{ user }}/upt_scripts/upt-celery-up.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+function django-celery(){
+        echo "Starting UPT Celery Distance"
+        cd /home/{{ user }}/upt-distance/
+        source /home/{{ user }}/python3/bin/activate && celery -A ST worker --loglevel=error
+}
+django-celery

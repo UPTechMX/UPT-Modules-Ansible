@@ -1,0 +1,8 @@
+#!/bin/bash
+
+function django(){
+        echo "Starting UPT Distance"
+        cd /home/{{ user }}/upt-distance/
+        source /home/{{ user }}/python3/bin/activate && python manage.py runserver 0.0.0.0:90
+}
+django

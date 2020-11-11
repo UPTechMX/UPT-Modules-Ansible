@@ -1,0 +1,10 @@
+psycopg2_binary
+sqlalchemy
+numpy
+python-decouple
+django
+django_filter
+djangorestframework
+django-celery-results
+Celery==4.4.7
+uwsgi

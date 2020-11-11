@@ -1,0 +1,11 @@
+# put this file at /etc/systemd/system/upt-celery-distance.service on ubuntu servers
+# give the file execution permissions
+# enable it with sudo systemctl enable upt-celery-distance.service
+[Unit]
+Description=upt-celery-distance script
+
+[Service]
+ExecStart=/home/{{ user }}/upt_scripts/upt-celery-distance.sh
+
+[Install]
+WantedBy=multi-user.target
