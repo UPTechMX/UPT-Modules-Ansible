@@ -40,11 +40,13 @@ SSH to the target server and perform the following steps:
   git clone https://github.com/UPTechMX/UPT-Modules-Ansible.git
   cd UPT-Modules-Ansible
   ```
-* Adjust to user that is part of `sudo` group in `install_upt_modules.yml`
+* Adjust `install_upt_modules.yml`
 ```
+#################
 - hosts: all
   vars:
-    user: changeme # <------ Change this variable
+    user: changeme # <------ Change this variable to user belonging to sudo group
+#################
 ```
 * Adjust ports for the modules to listen to:
   * ```UPT-Distance.j2```
