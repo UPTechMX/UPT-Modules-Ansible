@@ -142,7 +142,7 @@
     
     - name: Copying requirements file
       copy:
-        src: upt_modules/requirements.txt
+        src: pltools/requirements.txt
         dest: /home/{{ user }}/python3/
 
     - name: Installing requirements
@@ -173,60 +173,60 @@
 
     - name: Creating script for UPT Distances
       template:
-        src: upt_modules/UPT-Distance.j2
+        src: pltools/UPT-Distance.j2
         dest: /home/{{ user }}/upt_scripts/upt-distance.sh
         mode: 0100
     
     - name: Creating script for UPT UP
       template:
-        src: upt_modules/UPT-UP.j2
+        src: pltools/UPT-UP.j2
         dest: /home/{{ user }}/upt_scripts/upt-up.sh
         mode: 0100
     
     - name: Creating script for UPT Distances
       template:
-        src: upt_modules/UPT-CeleryDistance.j2
+        src: pltools/UPT-CeleryDistance.j2
         dest: /home/{{ user }}/upt_scripts/upt-celery-distance.sh
         mode: 0100
     
     - name: Creating script for UPT UP
       template:
-        src: upt_modules/UPT-CeleryUP.j2
+        src: pltools/UPT-CeleryUP.j2
         dest: /home/{{ user }}/upt_scripts/upt-celery-up.sh
         mode: 0100
     
     - name: Creating Service for UPT Distance
       template:
-        src: upt_modules/UPT-DistanceService.j2
+        src: pltools/UPT-DistanceService.j2
         dest:  /etc/systemd/system/upt-distance.service
         mode: 0755
     
     - name: Creating Service for UPT UP
       template:
-        src: upt_modules/UPT-UPService.j2
+        src: pltools/UPT-UPService.j2
         dest:  /etc/systemd/system/upt-up.service
         mode: 0755
     
     - name: Creating Service for UPT Celery Distance
       template:
-        src: upt_modules/UPT-CeleryDistanceService.j2
+        src: pltools/UPT-CeleryDistanceService.j2
         dest:  /etc/systemd/system/upt-celery-distance.service
         mode: 0755
     
     - name: Creating Service for UPT Celery UP
       template:
-        src: upt_modules/UPT-CeleryUPService.j2
+        src: pltools/UPT-CeleryUPService.j2
         dest:  /etc/systemd/system/upt-celery-up.service
         mode: 0755
 
     - name: Create Distance .env file
       copy:
-        src: upt_modules/Distance.env
+        src: pltools/Distance.env
         dest: /home/{{ user }}/upt-distance/ST/.env
 
     - name: Create UP .env file
       copy:
-        src: upt_modules/UP.env
+        src: pltools/UP.env
         dest: /home/{{ user }}/upt-up/UP/.env
 
     - name: Initializing UPT Distance database
