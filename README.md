@@ -99,6 +99,4 @@ SSH to the target server and perform the following steps:
   * `upt-distance` module is listening to the appropriate port
   * `upt-celery-distance` service is enabled and running
   * `upt-celery-up` service is enabled and running
-  * `upt-distance` service is enabled and running
-  * `upt-up` service is enabled and running
 * Done!
