@@ -20,7 +20,7 @@
     
     - name: Installing PostGIS
       apt:
-        name: postgresql-10-postgis-2.4
+        name: postgresql-11-postgis-2.5
         #state: latest
     
     - name: Starting postgres
@@ -31,21 +31,21 @@
     
     - name: Postgresql allowing remote connections ipv4
       lineinfile:
-        path: /etc/postgresql/10/main/pg_hba.conf 
+        path: /etc/postgresql/11/main/pg_hba.conf 
         regexp: '^host(.*)(all)(.*)(all)(.*)(127.0.0.1/32)(.*)$'
         line: 'host\1\2\3\4\5 0.0.0.0/0 \7'
         backrefs: yes
     
     - name: Postgresql allowing remote connections ipv6
       lineinfile:
-        path: /etc/postgresql/10/main/pg_hba.conf 
+        path: /etc/postgresql/11/main/pg_hba.conf 
         regexp: '^host(.*)(all)(.*)(all)(.*)(::1/128)(.*)$'
         line: 'host\1\2\3\4\5::0/0\7'
         backrefs: yes
     
     - name: Postgresql listen on all IP
       lineinfile:
-        path: /etc/postgresql/10/main/postgresql.conf
+        path: /etc/postgresql/11/main/postgresql.conf
         regexp: ^\# (listen_addresses = \')(localhost)(\'.*)$
         line: '\1*\3'
         backrefs: yes
