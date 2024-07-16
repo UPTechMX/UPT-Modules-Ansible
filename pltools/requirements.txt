@@ -1,5 +1,5 @@
 psycopg2_binary
-sqlalchemy
+sqlalchemy==1.4
 numpy
 architect
 python-decouple
